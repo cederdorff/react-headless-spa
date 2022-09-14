@@ -60,10 +60,6 @@ a {
     color: var(--text-color-danger);
 }
 
-.text-error:first-letter {
-    text-transform: uppercase;
-}
-
 /* ---------- animations ---------- */
 /* fade in */
 @keyframes fadeIn {
@@ -146,10 +142,6 @@ nav a.active {
     transition: 0.5s;
     animation: fadeIn 0.5s;
     cursor: pointer;
-}
-
-.grid-container > article ::first-letter {
-    text-transform: uppercase;
 }
 
 .grid-container > article:hover {

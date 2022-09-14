@@ -4,6 +4,7 @@ import AboutPage from "./pages/AboutPage";
 import Nav from "./components/Nav";
 import PostsPage from "./pages/PostsPage";
 import PostPage from "./pages/PostPage";
+import PersonsPage from "./pages/PersonsPage";
 
 function App() {
     return (
@@ -13,6 +14,8 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/posts" element={<PostsPage />} />
                 <Route path="/posts/:slug" element={<PostPage />} />
+                <Route path="/persons" element={<PersonsPage />} />
+                <Route path="/persons/:slug" element={<PostPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
