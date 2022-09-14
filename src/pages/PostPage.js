@@ -27,8 +27,8 @@ export default function PostPage() {
         <section className="page">
             <section className="post-row">
                 <article>
-                    <h3>{post.title && parse(post.title?.rendered)}</h3>
-                    {post.content && parse(post.content?.rendered)}
+                    <h3>{post.title && parse(post.title.rendered)}</h3>
+                    {post.content && parse(post.content.rendered)}
                 </article>
                 <figure>
                     <img src={image} alt={post.title?.rendered} />
