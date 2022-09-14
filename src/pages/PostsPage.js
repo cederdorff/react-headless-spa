@@ -5,9 +5,12 @@ export default function PostsPage() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch("https://react-api.cederdorff.com/wp-json/wp/v2/posts?_embed")
-            .then(res => res.json())
-            .then(setPosts);
+        async function getData() {
+            const response = await fetch("https://react-api.cederdorff.com/wp-json/wp/v2/posts?_embed");
+            const data = await response.json();
+            setPosts(data);
+        }
+        getData();
     }, []);
     return (
         <section className="page">
