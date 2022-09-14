@@ -7,11 +7,6 @@ export default function PostPage() {
     const params = useParams();
     console.log(params);
     const slug = params.slug;
-    let image = "https://cederdorff.github.io/img/logo512.webp";
-
-    if (post._embedded && post._embedded["wp:featuredmedia"]) {
-        image = post._embedded["wp:featuredmedia"][0].source_url;
-    }
 
     useEffect(() => {
         async function getPost() {
@@ -23,6 +18,13 @@ export default function PostPage() {
         }
         getPost();
     }, [slug]);
+
+    let image = "https://cederdorff.github.io/img/logo512.webp";
+
+    if (post._embedded && post._embedded["wp:featuredmedia"]) {
+        image = post._embedded["wp:featuredmedia"][0].source_url;
+    }
+
     return (
         <section className="page">
             <section className="post-row">
