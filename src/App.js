@@ -15,7 +15,6 @@ function App() {
                 <Route path="/posts" element={<PostsPage />} />
                 <Route path="/posts/:slug" element={<PostPage />} />
                 <Route path="/persons" element={<PersonsPage />} />
-                <Route path="/persons/:slug" element={<PostPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
