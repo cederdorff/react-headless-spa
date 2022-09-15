@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function PostItem({ post }) {
     const navigate = useNavigate();
 
-    let image = "https://cederdorff.github.io/img/logo512.webp";
+    let image = "https://cederdorff.github.io/img/logo512.webp"; // fallback image
 
     if (post._embedded && post._embedded["wp:featuredmedia"]) {
         image = post._embedded["wp:featuredmedia"][0].source_url;
