@@ -2,7 +2,7 @@ import parse from "html-react-parser";
 import { useNavigate } from "react-router-dom";
 
 export default function PostItem({ post }) {
-    const natigate = useNavigate();
+    const navigate = useNavigate();
 
     let image = "https://cederdorff.github.io/img/logo512.webp";
 
@@ -11,7 +11,7 @@ export default function PostItem({ post }) {
     }
 
     return (
-        <article onClick={() => natigate(post.slug)}>
+        <article onClick={() => navigate(post.slug)}>
             <img src={image} alt={post.title.rendered} />
             <h2>{parse(post.title.rendered)}</h2>
         </article>
