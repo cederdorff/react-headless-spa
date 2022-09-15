@@ -53,6 +53,22 @@ a {
     padding: 1em;
 }
 
+.page.home {
+    background-color: var(--green);
+}
+
+.home .logo {
+    height: 300px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .text-center {
     text-align: center;
 }
