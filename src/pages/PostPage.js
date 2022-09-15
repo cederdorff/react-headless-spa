@@ -13,7 +13,6 @@ export default function PostPage() {
             const url = `https://react-api.cederdorff.com/wp-json/wp/v2/posts?slug=${slug}&_embed`;
             const response = await fetch(url);
             const data = await response.json();
-            console.log(data[0]);
             setPost(data[0]);
         }
         getPost();
